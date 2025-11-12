@@ -119,42 +119,37 @@ function updatePasswordStrength(strength) {
 
 async function handleSignin(e) {
     e.preventDefault();
-    
+
     const formData = new FormData(e.target);
+    formData.append('action', 'signin'); // Add this line
+
     const submitBtn = e.target.querySelector('.auth-btn');
-    
-    // Show loading state
     const originalText = submitBtn.textContent;
     submitBtn.textContent = 'Signing In...';
     submitBtn.disabled = true;
-    
+
     clearErrors();
-    
+
     try {
-        const response = await fetch('handlers/signin.php', {
+        const response = await fetch('sign-in.php', { // Change to sign-in.php
             method: 'POST',
             body: formData
         });
-        
+
         const result = await response.json();
-        
+
         if (result.success) {
             showModal('Welcome Back!', result.message);
             setTimeout(() => {
                 window.location.href = result.redirect;
             }, 2000);
         } else {
-            if (result.errors) {
-                displayErrors(result.errors, 'signin');
-            } else {
-                showError('signin-password', result.message);
-            }
+            showError('signin-password', result.message);
         }
     } catch (error) {
         console.error('Error:', error);
         showError('signin-password', 'An error occurred. Please try again.');
     } finally {
-        // Reset button state
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
     }
@@ -162,65 +157,42 @@ async function handleSignin(e) {
 
 async function handleRegister(e) {
     e.preventDefault();
-    
+
     const formData = new FormData(e.target);
+    formData.append('action', 'register'); // Add this line
+
     const submitBtn = e.target.querySelector('.auth-btn');
-    
-    // Show loading state
     const originalText = submitBtn.textContent;
     submitBtn.textContent = 'Creating Account...';
     submitBtn.disabled = true;
-    
+
     clearErrors();
-    
-    // Client-side validation
-    const password = formData.get('password');
-    const confirmPassword = formData.get('confirmPassword');
-    const termsAgreed = formData.get('terms-agreement');
-    
-    if (password !== confirmPassword) {
-        showError('register-confirm-password', 'Passwords do not match');
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-        return;
-    }
-    
-    if (!document.getElementById('terms-agreement').checked) {
-        showError('terms-agreement', 'You must agree to the Terms & Conditions');
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-        return;
-    }
-    
+
     try {
-        const response = await fetch('.../handlers/registers.php', {
+        const response = await fetch('sign-in.php', { // Change to sign-in.php
             method: 'POST',
             body: formData
         });
-        
+
         const result = await response.json();
-        
+
         if (result.success) {
             showModal('Registration Successful!', result.message);
             setTimeout(() => {
                 window.location.href = result.redirect;
             }, 2000);
         } else {
-            if (result.errors) {
-                displayErrors(result.errors, 'register');
-            } else {
-                showError('register-email', result.message);
-            }
+            showError('register-email', result.message);
         }
     } catch (error) {
         console.error('Error:', error);
         showError('register-email', 'An error occurred. Please try again.');
     } finally {
-        // Reset button state
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
     }
 }
+
 
 function displayErrors(errors, formType) {
     Object.keys(errors).forEach(field => {

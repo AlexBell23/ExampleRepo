@@ -1,5 +1,50 @@
-
 <?php
+// Handle AJAX requests first
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
+    header('Content-Type: application/json');
+
+    try {
+        require_once 'includes/functions.php';
+
+        if ($_POST['action'] === 'signin') {
+            $email = $_POST['email'] ?? '';
+            $password = $_POST['password'] ?? '';
+
+            if (empty($email) || empty($password)) {
+                echo json_encode(['success' => false, 'message' => 'Email and password required']);
+                exit;
+            }
+
+            // For testing - replace with actual authentication
+            echo json_encode(['success' => true, 'message' => 'Login successful', 'redirect' => 'dashboard.php']);
+            exit;
+        }
+
+        if ($_POST['action'] === 'register') {
+            $firstname = $_POST['firstname'] ?? '';
+            $lastname = $_POST['lastname'] ?? '';
+            $email = $_POST['email'] ?? '';
+
+            if (empty($firstname) || empty($lastname) || empty($email)) {
+                echo json_encode(['success' => false, 'message' => 'All fields required']);
+                exit;
+            }
+
+            // For testing - replace with actual registration
+            echo json_encode(['success' => true, 'message' => 'Registration successful', 'redirect' => 'dashboard.php']);
+            exit;
+        }
+
+    } catch (Exception $e) {
+        echo json_encode(['success' => false, 'message' => 'Server error occurred']);
+        exit;
+    }
+}
+
+
+require_once 'includes/functions.php';
+
+
 session_start();
 require_once '../config/database.php';
 

@@ -1,0 +1,439 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Trainers - ToKa Fitness</title>
+    <link rel="stylesheet" href="../styles/trainers.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>ToKa Fitness</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="../index.html" class="nav-link dropdown-toggle">Home <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../index.html#about" class="dropdown-link">About</a></li>
+                        <li><a href="../index.html#programs" class="dropdown-link">Programs</a></li>
+                        <li><a href="../index.html#membership" class="dropdown-link">Membership</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="trainers.html" class="nav-link active">Trainers</a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a href="sign-in.html" class="nav-link sign-in-btn" id="authButton">Sign In</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="trainers-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Meet Your Personal Training Team</h1>
+                <p>Every membership includes access to certified specialists in your chosen training area. No extra fees - just expert guidance included with your membership.</p>
+                <a href="#trainers" class="btn btn-primary">Meet Your Trainers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Benefits Overview -->
+    <section class="membership-benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Training Specialists by Membership</h2>
+                <p>Each membership tier includes access to specialized trainers at no additional cost</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card day-pass">
+                    <h3>Day Pass (£3/day)</h3>
+                    <p>Access to group fitness instructors and basic guidance</p>
+                    <ul>
+                        <li>Group class instruction</li>
+                        <li>Basic equipment orientation</li>
+                        <li>General fitness advice</li>
+                    </ul>
+                </div>
+                <div class="benefit-card monthly">
+                    <h3>Monthly (£45/month)</h3>
+                    <p>Includes standard personal trainers for all specialties</p>
+                    <ul>
+                        <li>All Day Pass benefits</li>
+                        <li>Standard personal training sessions</li>
+                        <li>Specialized program design</li>
+                        <li>Progress tracking</li>
+                    </ul>
+                </div>
+                <div class="benefit-card annual featured">
+                    <div class="featured-badge">Best Value</div>
+                    <h3>Annual (£400/year)</h3>
+                    <p>Premium trainers plus exclusive wellness coaching</p>
+                    <ul>
+                        <li>All Monthly benefits</li>
+                        <li>Premium specialist trainers</li>
+                        <li>Nutrition consultation</li>
+                        <li>Priority booking</li>
+                        <li>Advanced program customization</li>
+                    </ul>
+                </div>
+                <div class="benefit-card student">
+                    <h3>Student (£30/month)</h3>
+                    <p>Standard trainers with student-focused programs</p>
+                    <ul>
+                        <li>Standard personal training</li>
+                        <li>Student lifestyle programs</li>
+                        <li>Flexible scheduling</li>
+                        <li>Budget-friendly guidance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section id="trainers" class="trainers-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Your Training Specialists</h2>
+                <p>Meet the certified professionals included with your membership</p>
+            </div>
+
+            <!-- Strength Training Specialists -->
+            <div class="specialty-section">
+                <h3 class="specialty-title">Strength Training Specialists</h3>
+                <div class="trainers-grid">
+                    <div class="trainer-card annual-premium">
+                        <div class="membership-badge annual">Annual Members</div>
+                        <div class="trainer-image">
+                            <div class="image-placeholder">MS</div>
+                        </div>
+                        <div class="trainer-info">
+                            <h4>Marcus Stone</h4>
+                            <p class="trainer-specialty">Elite Powerlifting Coach</p>
+                            <p class="trainer-experience">8+ years experience</p>
+                            <div class="trainer-credentials">
+                                <span class="credential">NASM-CPT</span>
+                                <span class="credential">Powerlifting Certified</span>
+                                <span class="credential">Competition Prep</span>
+                            </div>
+                            <p class="trainer-description">Advanced strength training with competition-level expertise. Specializes in powerlifting, Olympic lifts, and serious muscle building programs.</p>
+                            <div class="trainer-access">
+                                <span class="access-info">Included with Annual Membership</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trainer-card monthly-standard">
+                        <div class="membership-badge monthly">Monthly/Student Members</div>
+                        <div class="trainer-image">
+                            <div class="image-placeholder">AJ</div>
+                        </div>
+                        <div class="trainer-info">
+                            <h4>Alex Johnson</h4>
+                            <p class="trainer-specialty">Functional Strength Coach</p>
+                            <p class="trainer-experience">5+ years experience</p>
+                            <div class="trainer-credentials">
+                                <span class="credential">ACE-CPT</span>
+                                <span class="credential">Functional Movement</span>
+                            </div>
+                            <p class="trainer-description">Perfect for building foundational strength and functional movement patterns. Great for beginners to intermediate lifters.</p>
+                            <div class="trainer-access">
+                                <span class="access-info">Included with Monthly & Student Memberships</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trainer-card day-basic">
+                        <div class="membership-badge day">Day Pass</div>
+                        <div class="trainer-image">
+                            <div class="image-placeholder">TG</div>
+                        </div>
+                        <div class="trainer-info">
+                            <h4>Tom Garcia</h4>
+                            <p class="trainer-specialty">Strength Training Instructor</p>
+                            <p class="trainer-experience">3+ years experience</p>
+                            <div class="trainer-credentials">
+                                <span class="credential">Group Fitness</span>
+                                <span class="credential">Basic Strength</span>
+                            </div>
+                            <p class="trainer-description">Group instruction and basic strength training guidance. Perfect for getting started with proper form and technique.</p>
+                            <div class="trainer-access">
+                                <span class="access-info">Available with Day Pass</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HIIT & Cardio Specialists -->
+            <div class="specialty-section">
+                <h3 class="specialty-title">HIIT & Cardio Specialists</h3>
+                <div class="trainers-grid">
+                    <div class="trainer-card annual-premium featured">
+                        <div class="featured-badge">Most Popular</div>
+                        <div class="membership-badge annual">Annual Members</div>
+                        <div class="trainer-image">
+                            <div class="image-placeholder">SR</div>
+                        </div>
+                        <div class="trainer-info">
+                            <h4>Sarah Rodriguez</h4>
+                            <p class="trainer-specialty">Elite HIIT & Metabolic Coach</p>
+                            <p class="trainer-experience">7+ years experience</p>
+                            <div class="trainer-credentials">
+                                <span class="credential">ACSM-CPT</span>
+                                <span class="credential">HIIT Master</span>
+                                <span class="credential">Metabolic Specialist</span>
+                            </div>
+                            <p class="trainer-description">High-intensity training with advanced metabolic conditioning. Specializes in rapid fat loss and athletic performance enhancement.</p>
+                            <div class="trainer-access">
+                                <span class="access-info">Included with Annual Membership</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trainer-card monthly-standard">
+                        <div class="membership-badge monthly">Monthly/Student Members</div>
+                        <div class="trainer-image">
+                            <div class="image-placeholder">MT</div>
+                        </div>
+                        <div class="trainer-info">
+                            <h4>Mike Thompson</h4>
+                            <p class="trainer-specialty">Cardio & Endurance Coach</p>
+                            <p class="trainer-experience">4+ years experience</p>
+                            <div class="trainer-credentials">
+                                <span class="credential">NSCA-CPT</span>
+                                <span class="credential">Cardio Specialist</span>
+                            </div>
+                            <p class="trainer-description">Builds cardiovascular fitness and endurance. Great for runners, general fitness, and sustainable cardio programs.</p>
+                            <div class="trainer-access">
+                                <span class="access-info">Included with Monthly & Student Memberships</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trainer-card day-basic">
+                        <div class="membership-badge day">Day Pass</div>
+                        <div class="trainer-image">
+                            <div class="image-placeholder">EL</div>
+                        </div>
+                        <div class="trainer-info">
+                            <h4>Emma Lewis</h4>
+                            <p class="trainer-specialty">Group Fitness Instructor</p>
+                            <p class="trainer-experience">3+ years experience</p>
+                            <div class="trainer-credentials">
+                                <span class="credential">Group Fitness</span>
+                                <span class="credential">Bootcamp Certified</span>
+                            </div>
+                            <p class="trainer-description">Energetic group cardio classes and basic HIIT instruction. Perfect for beginners and group workout enthusiasts.</p>
+                            <div class="trainer-access">
+                                <span class="access-info">Available with Day Pass</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Yoga & Wellness Specialists -->
+            <div class="specialty-section">
+                <h3 class="specialty-title">Yoga & Wellness Specialists</h3>
+                <div class="trainers-grid">
+                    <div class="trainer-card annual-premium">
+                        <div class="membership-badge annual">Annual Members</div>
+                        <div class="trainer-image">
+                            <div class="image-placeholder">LP</div>
+                        </div>
+                        <div class="trainer-info">
+                            <h4>Luna Patel</h4>
+                            <p class="trainer-specialty">Master Yoga & Wellness Coach</p>
+                            <p class="trainer-experience">10+ years experience</p>
+                            <div class="trainer-credentials">
+                                <span class="credential">RYT-500</span>
+                                <span class="credential">Meditation Master</span>
+                                <span class="credential">Wellness Coach</span>
+                                <span class="credential">Nutrition Certified</span>
+                            </div>
+                            <p class="trainer-description">Complete mind-body wellness with advanced yoga practices, meditation, and holistic health coaching including nutrition guidance.</p>
+                            <div class="trainer-access">
+                                <span class="access-info">Included with Annual Membership</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trainer-card monthly-standard">
+                        <div class="membership-badge monthly">Monthly/Student Members</div>
+                        <div class="trainer-image">
+                            <div class="image-placeholder">JW</div>
+                        </div>
+                        <div class="trainer-info">
+                            <h4>James Wilson</h4>
+                            <p class="trainer-specialty">Mobility & Recovery Coach</p>
+                            <p class="trainer-experience">6+ years experience</p>
+                            <div class="trainer-credentials">
+                                <span class="credential">RYT-200</span>
+                                <span class="credential">Mobility Specialist</span>
+                            </div>
+                            <p class="trainer-description">Focuses on flexibility, mobility, and injury prevention through yoga and targeted recovery techniques.</p>
+                            <div class="trainer-access">
+                                <span class="access-info">Included with Monthly & Student Memberships</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trainer-card day-basic">
+                        <div class="membership-badge day">Day Pass</div>
+                        <div class="trainer-image">
+                            <div class="image-placeholder">MK</div>
+                        </div>
+                        <div class="trainer-info">
+                            <h4>Maya Kim</h4>
+                            <p class="trainer-specialty">Basic Yoga Instructor</p>
+                            <p class="trainer-experience">2+ years experience</p>
+                            <div class="trainer-credentials">
+                                <span class="credential">RYT-200</span>
+                                <span class="credential">Beginner Yoga</span>
+                            </div>
+                            <p class="trainer-description">Gentle yoga classes and basic stretching guidance. Perfect for beginners and those seeking relaxation and basic flexibility.</p>
+                            <div class="trainer-access">
+                                <span class="access-info">Available with Day Pass</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How Your Training Works</h2>
+                <p>Simple steps to start training with your included specialists</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Choose Your Membership</h3>
+                    <p>Select the membership that includes the trainers and programs you want</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Book Your Sessions</h3>
+                    <p>Schedule training sessions with your included specialists through our app or front desk</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Start Training</h3>
+                    <p>Begin your personalized fitness journey with expert guidance included in your membership</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Training?</h2>
+                <p>Choose your membership and get immediate access to your personal training specialists!</p>
+                <a href="../index.html#membership" class="btn btn-primary btn-large">Choose Your Membership</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ToKa Fitness</h3>
+                    <p>Transform your body, transform your life. Join our fitness family today and discover what you're truly capable of achieving.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#programs">Programs</a></li>
+                        <li><a href="../index.html#membership">Membership</a></li>
+                        <li><a href="trainers.html">Trainers</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Training Specialties</h4>
+                    <ul>
+                        <li><a href="#trainers">Strength Training</a></li>
+                        <li><a href="#trainers">HIIT & Cardio</a></li>
+                        <li><a href="#trainers">Yoga & Wellness</a></li>
+                        <li><a href="../index.html#membership">Membership Benefits</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:info@tokafitness.com">Join Today</a></li>
+                        <li><a href="mailto:info@tokafitness.com">Book Training</a></li>
+                        <li><a href="mailto:info@tokafitness.com">Group Sessions</a></li>
+                        <li><a href="mailto:info@tokafitness.com">Consultation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ToKa Fitness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Load saved settings when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            loadSavedSettings();
+
+            // Add hamburger menu functionality
+            const hamburger = document.querySelector('.hamburger');
+            if (hamburger) {
+                hamburger.addEventListener('click', toggleMobileMenu);
+            }
+        });
+
+        // Load saved settings from localStorage
+        function loadSavedSettings() {
+            // Load dark mode setting
+            const isDarkMode = localStorage.getItem('darkMode') === 'true';
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+            }
+
+            // Load font size setting
+            const savedFontSize = localStorage.getItem('fontSize') || 'medium';
+            document.body.className = document.body.className.replace(/font-(small|medium|large)/g, '');
+            document.body.classList.add(`font-${savedFontSize}`);
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            const hamburger = document.querySelector('.hamburger');
+
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+

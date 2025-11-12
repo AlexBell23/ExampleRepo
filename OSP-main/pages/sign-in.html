@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - ToKa Fitness</title>
+    <link rel="stylesheet" href="../styles/sign-in.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>ToKa Fitness</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="../index.html" class="nav-link dropdown-toggle">Home <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../index.html#about" class="dropdown-link">About</a></li>
+                        <li><a href="../index.html#programs" class="dropdown-link">Programs</a></li>
+                        <li><a href="../index.html#membership" class="dropdown-link">Membership</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="trainers.html" class="nav-link">Trainers</a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a href="sign-in.html" class="nav-link sign-in-btn active">Sign In</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="auth-main">
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <h1>Welcome to ToKa Fitness</h1>
+                    <p>Join our fitness community today</p>
+                </div>
+
+                <!-- Tab Navigation -->
+                <div class="auth-tabs">
+                    <button class="tab-btn active" data-tab="signin">Sign In</button>
+                    <button class="tab-btn" data-tab="register">Register</button>
+                </div>
+
+                <!-- Sign In Form -->
+                <div class="auth-form-container" id="signin-form">
+                    <form class="auth-form" id="signinForm">
+                        <div class="form-group">
+                            <label for="signin-email">Email Address</label>
+                            <input type="email" id="signin-email" name="email" required>
+                            <span class="error-message" id="signin-email-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="signin-password">Password</label>
+                            <div class="password-input">
+                                <input type="password" id="signin-password" name="password" required>
+                                <button type="button" class="password-toggle" data-target="signin-password">
+                                    <span class="toggle-text">Show</span>
+                                </button>
+                            </div>
+                            <span class="error-message" id="signin-password-error"></span>
+                        </div>
+
+                        <div class="form-options">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="remember-me">
+                                <span class="checkmark"></span>
+                                Remember me
+                            </label>
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+
+                        <button type="submit" class="auth-btn">Sign In</button>
+
+                        <div class="auth-divider">
+                            <span>or</span>
+                        </div>
+
+                        <div class="social-auth">
+                            <button type="button" class="social-btn google-btn">
+                                <span class="social-icon">G</span>
+                                Continue with Google
+                            </button>
+                            <button type="button" class="social-btn facebook-btn">
+                                <span class="social-icon">f</span>
+                                Continue with Facebook
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Register Form -->
+                <div class="auth-form-container hidden" id="register-form">
+                    <form class="auth-form" id="registerForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="register-firstname">First Name</label>
+                                <input type="text" id="register-firstname" name="firstname" required>
+                                <span class="error-message" id="register-firstname-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="register-lastname">Last Name</label>
+                                <input type="text" id="register-lastname" name="lastname" required>
+                                <span class="error-message" id="register-lastname-error"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="register-email">Email Address</label>
+                            <input type="email" id="register-email" name="email" required>
+                            <span class="error-message" id="register-email-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="register-phone">Phone Number</label>
+                            <input type="tel" id="register-phone" name="phone" required>
+                            <span class="error-message" id="register-phone-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="register-password">Password</label>
+                            <div class="password-input">
+                                <input type="password" id="register-password" name="password" required>
+                                <button type="button" class="password-toggle" data-target="register-password">
+                                    <span class="toggle-text">Show</span>
+                                </button>
+                            </div>
+                            <div class="password-strength" id="password-strength">
+                                <div class="strength-bar">
+                                    <div class="strength-fill"></div>
+                                </div>
+                                <span class="strength-text">Password strength</span>
+                            </div>
+                            <span class="error-message" id="register-password-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="register-confirm-password">Confirm Password</label>
+                            <div class="password-input">
+                                <input type="password" id="register-confirm-password" name="confirmPassword" required>
+                                <button type="button" class="password-toggle" data-target="register-confirm-password">
+                                    <span class="toggle-text">Show</span>
+                                </button>
+                            </div>
+                            <span class="error-message" id="register-confirm-password-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="membership-type">Preferred Membership</label>
+                            <select id="membership-type" name="membershipType" required>
+                                <option value="">Select a membership</option>
+                                <option value="day-pass">Day Pass (£3/day)</option>
+                                <option value="monthly">Monthly (£45/month)</option>
+                                <option value="annual">Annual (£400/year)</option>
+                                <option value="student">Student (£30/month)</option>
+                            </select>
+                            <span class="error-message" id="membership-type-error"></span>
+                        </div>
+
+                        <div class="form-options">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="terms-agreement" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="#" class="terms-link">Terms & Conditions</a>
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="newsletter-signup">
+                                <span class="checkmark"></span>
+                                Subscribe to our newsletter
+                            </label>
+                        </div>
+
+                        <button type="submit" class="auth-btn">Create Account</button>
+
+                        <div class="auth-divider">
+                            <span>or</span>
+                        </div>
+
+                        <div class="social-auth">
+                            <button type="button" class="social-btn google-btn">
+                                <span class="social-icon">G</span>
+                                Sign up with Google
+                            </button>
+                            <button type="button" class="social-btn facebook-btn">
+                                <span class="social-icon">f</span>
+                                Sign up with Facebook
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modal-title">Welcome to ToKa Fitness!</h3>
+                <button class="modal-close" id="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="success-icon">✓</div>
+                <p id="modal-message">You have successfully signed in. Redirecting to your dashboard...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ToKa Fitness</h3>
+                    <p>Transform your body, transform your life. Join our fitness family today and discover what you're truly capable of achieving.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#programs">Programs</a></li>
+                        <li><a href="../index.html#membership">Membership</a></li>
+                        <li><a href="trainers.html">Trainers</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:info@tokafitness.com">info@tokafitness.com</a></li>
+                        <li><a href="tel:+441234567890">+44 123 456 7890</a></li>
+                        <li>123 Fitness Street, London, UK</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ToKa Fitness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/sign-in.js"></script>
+</body>
+</html>

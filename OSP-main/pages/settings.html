@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - ToKa Fitness</title>
+    <link rel="stylesheet" href="../styles/settings.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>ToKa Fitness</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="../index.html" class="nav-link dropdown-toggle">Home <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../index.html#about" class="dropdown-link">About</a></li>
+                        <li><a href="../index.html#programs" class="dropdown-link">Programs</a></li>
+                        <li><a href="../index.html#membership" class="dropdown-link">Membership</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="trainers.html" class="nav-link">Trainers</a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link active">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a href="sign-in.html" class="nav-link sign-in-btn" id="authButton">Sign In</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="settings-container">
+            <a href="../index.html" class="btn btn-outline back-button">← Back to Home</a>
+            
+            <div class="settings-header">
+                <h1>Settings</h1>
+                <p>Customize your ToKa Fitness experience</p>
+            </div>
+            
+            <!-- Display Settings -->
+            <div class="settings-section">
+                <h2>🎨 Display Settings</h2>
+                
+                <div class="settings-option" data-setting="dark-mode">
+                    <div class="option-info">
+                        <h3>Dark Mode</h3>
+                        <p>Switch between light and dark themes</p>
+                    </div>
+                    <div class="option-control">
+                        <div class="toggle-switch" id="dark-mode-toggle">
+                            <div class="toggle-slider"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="settings-option" data-setting="font-size">
+                    <div class="option-info">
+                        <h3>Font Size</h3>
+                        <p>Adjust text size for better readability</p>
+                    </div>
+                    <div class="option-control">
+                        <select class="select-dropdown" id="font-size-select">
+                            <option value="small">Small</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!--screen reader HTML-->
+            <div id="screen-reader-controls">
+                <button id="toggle-reader">Toggle Screen Reader</button>
+                <label>
+                    Speed: <input type="range" id="speed-control" min="0.5" max="2" step="0.1" value="1">
+                </label>
+                <label>
+                    Voice: <select id="voice-select"></select>
+                </label>
+            </div>
+            
+            <button class="save-button" onclick="saveSettings()">Save Settings</button>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        Settings saved successfully!
+    </div>
+
+    <script src="../scripts/settings.js"></script>
+</body>
+</html>
